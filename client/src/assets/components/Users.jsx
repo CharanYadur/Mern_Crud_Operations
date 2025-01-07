@@ -7,8 +7,8 @@ const Users = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        // axios.get("http://localhost:3004")
-        axios.get("http://3.110.183.190:3001")
+        axios.get("http://localhost:3001")
+        // axios.get("http://3.110.183.190:3001:3001/")
             .then(result => setUsers(result.data))
             .catch(err => console.log(err))
     }, [])

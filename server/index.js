@@ -8,19 +8,30 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// mongoose.connect("mongodb://localhost:27017/crud")
-const uri = "mongodb+srv://charan:vB6VID59BGG3iZu3@cluster0.po9ml.mongodb.net/crud?retryWrites=true&w=majority";
-// const uri = "mongodb://localhost:27017/crud";
-mongoose.connect(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => {
-  console.log('Connected to MongoDB Atlas successfully!');
-})
-.catch((err) => {
-  console.error('Error connecting to MongoDB Atlas:', err);
-});
+// // mongoose.connect("mongodb://localhost:27017/crud")
+// const uri = "mongodb+srv://charan:vB6VID59BGG3iZu3@cluster0.po9ml.mongodb.net/crud?retryWrites=true&w=majority";
+// // const uri = "mongodb://localhost:27017/crud";
+// mongoose.connect(uri, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// })
+// .then(() => {
+//   console.log('Connected to MongoDB Atlas successfully!');
+// })
+// .catch((err) => {
+//   console.error('Error connecting to MongoDB Atlas:', err);
+// });
+
+const uri = "mongodb+srv://charan:Charankumar%40123@cluster0.zsb0r.mongodb.net/crud";
+mongoose.connect(uri)
+    .then(() => {
+        console.log('Connected to MongoDB Atlas successfully!');
+    })
+    .catch((err) => {
+        console.error('Error connecting to MongoDB Atlas:', err);
+    });
+
+
 
 
 app.get('/', (req, res) => {

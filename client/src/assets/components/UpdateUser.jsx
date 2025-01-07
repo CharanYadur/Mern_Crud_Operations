@@ -10,8 +10,8 @@ const UpdateUser = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        // axios.get("http://localhost:3004/getuser/" + id)
-        axios.get("http://3.110.183.190:3001/getuser/" + id)
+        axios.get("http://localhost:3001/getuser/" + id)
+            // axios.get("http://3.110.183.190:3001/getuser/" + id)
             .then(result => {
                 console.log(result)
                 setName(result.data.name)
